@@ -16,6 +16,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 
 import { AppRoutingModule }     from './app-routing.module';
 import { HeroSearchComponent } from './hero-search/hero-search.component';
+import { PetsComponent } from './pets/pets.component';
+import { PetService } from './pet.service';
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule, AppRoutingModule, HttpClientModule,
@@ -26,8 +28,8 @@ import { HeroSearchComponent } from './hero-search/hero-search.component';
 HttpClientInMemoryWebApiModule.forRoot(
   InMemoryDataService, { dataEncapsulation: false }
 ) ],
-  declarations: [ AppComponent, HeroesComponent, HeroDetailComponent, MessagesComponent, DashboardComponent, HeroSearchComponent ],
+  declarations: [ AppComponent, HeroesComponent, HeroDetailComponent, MessagesComponent, DashboardComponent, HeroSearchComponent, PetsComponent ],
   bootstrap:    [ AppComponent ],
-  providers: [HeroService, MessageService, InMemoryDataService]
+  providers: [HeroService, MessageService, InMemoryDataService, PetService]
 })
 export class AppModule { }
